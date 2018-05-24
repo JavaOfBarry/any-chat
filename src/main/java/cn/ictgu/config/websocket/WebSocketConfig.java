@@ -42,7 +42,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 					@Override
 					public void afterConnectionEstablished(final WebSocketSession session) throws Exception {
 						String username = session.getPrincipal().getName();
-						log.info("online: " + username);
+//						log.info("online: " + username);
 						super.afterConnectionEstablished(session);
 					}
 
@@ -50,7 +50,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 					public void afterConnectionClosed(WebSocketSession session, CloseStatus closeStatus)
 							throws Exception {
 						String username = session.getPrincipal().getName();
-						log.info("offline: " + username);
+//						log.info("offline: " + username);
 						super.afterConnectionClosed(session, closeStatus);
 					}
 				};

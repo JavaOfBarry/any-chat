@@ -30,11 +30,11 @@ public class RelationService {
 	public boolean addFriend(String username, String friendName) {
 		User user = userService.getByUsername(friendName);
 		if (user == null) {
-			log.info("用户不存在：" + friendName);
+//			log.info("用户不存在：" + friendName);
 			return false;
 		}
 		if (username.equals(friendName)) {
-			log.info("不能添加自己为好友：" + friendName);
+//			log.info("不能添加自己为好友：" + friendName);
 			return false;
 		}
 		this.establishRelation(username, friendName);
